@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "index.html",
-      "use": "@vercel/static"
-    }
-  ],
+  "public": true,
+  "builds": [],
   "routes": [
-    { "src": "/.*", "dest": "/" }
+    {
+      "src": "/(css|js|imgs|webfonts|scss)/(.*)",
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      }
+    }
   ]
 }
