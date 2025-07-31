@@ -4,10 +4,7 @@
   "builds": [],
   "routes": [
     {
-      "src": "/(css|js|imgs|webfonts|scss)/(.*)",
-      "headers": {
-        "cache-control": "public, max-age=31536000, immutable"
-      }
+      "src": "/(css|js|imgs|webfonts|scss)/(.*)"
     }
   ]
 }
