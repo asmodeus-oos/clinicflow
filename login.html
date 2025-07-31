@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Login</h1>
+  <form id="loginForm">
+    <p>
+      <label>Email</label><br>
+      <input type="email" id="email" required>
+    </p>
+    <p>
+      <label>Password</label><br>
+      <input type="password" id="password" required>
+    </p>
+    <button type="submit">Sign In</button>
+  </form>
+  <div id="error" style="color: red; margin-top: 10px;"></div>
+  <script src="script.js"></script>
+  <script>
+    document.getElementById('loginForm').onsubmit = async (e) => {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      await login(email, password);
+    };
+  </script>
+</body>
+</html>
